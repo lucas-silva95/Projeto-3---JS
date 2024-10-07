@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Slab", serif;
+    outline: none;
+}
+
+body {
+    background-color: rgba(138, 81, 252, 1);
+    position: relative; /* Necessário para o pseudo-elemento */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("./assets/money-8970.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.3; /* Ajuste a opacidade para deixá-la menos visível */
+    z-index: -1; /* Coloca a imagem atrás do conteúdo */
+}
+
+
+.img-logo-mao{
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin: 20px auto;
+}
+
+main {background-color: rgba(244, 244, 244, 1);
+    width: 375px;
+    border-radius: 20px;
+    margin: 0 auto;
+    padding: 44px 24px 23px;
+}
+
+label{
+    color: rgba(119, 119, 119, 1);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+select, input{
+    width: 100%;
+    height: 48px;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(187, 187, 187, 1);
+    margin-bottom: 24px;
+    border-radius: 8px;
+    appearance: none;
+    padding-left: 18px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgba(85, 85, 85, 1);
+}
+
+button{
+    background-color: rgba(138, 81, 252, 1);
+    width: 100%;
+    height: 48px;
+    border: 5px solid transparent;
+    border-radius: 5px;
+    box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.25);
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+    transition: 1s;
+}
+
+button:hover{
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+button:active{
+    opacity: 0.6;
+}
+
+section{
+    border: 2px solid rgba(138, 81, 252, 1);
+    border-radius: 20px;
+    margin-top: 36px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-img{
+    margin: 15px 0px;
+}
+
+.caixa-moeda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.primeira-moeda, .moeda-dolar{
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(119, 119, 119, 1);   ;
+}
+
+.valor-moeda-real, .valor-moeda-dolar{
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 700;
+    color:rgba(85, 85, 85, 1);  
+}
+
+@media screen and (max-width: 2560px){
+    .img-logo-mao{
+        width: 10%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1518px){
+    .img-logo-mao{
+        width: 9%;
+        height: auto;
+    }
+
+    main {background-color: rgba(244, 244, 244, 1);
+        width: 375px;
+        border-radius: 20px;
+        margin: 0 auto;
+        padding: 8px 24px 23px;
+    }
+
+    select, input{
+        width: 100%;
+        height: 35px;
+        background: rgba(255, 255, 255, 1);
+        border: 1px solid rgba(187, 187, 187, 1);
+        margin-bottom: 8px;
+        border-radius: 8px;
+        appearance: none;
+        padding-left: 18px;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 700;
+        color: rgba(85, 85, 85, 1);
+    }
+
+    section{
+        border: 2px solid rgba(138, 81, 252, 1);
+        border-radius: 20px;
+        margin-top: 15px;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .arrow-img{
+        margin: 3px 0px;
+    }
+
+    button{
+        background-color: rgba(138, 81, 252, 1);
+        width: 100%;
+        height: 38px;
+        border: 5px solid transparent;
+        border-radius: 5px;
+        box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.25);
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 1);
+        cursor: pointer;
+        transition: 1s;
+        margin-top: 5px;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .img-logo-mao{
+        width: 22%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .img-logo-mao{
+        width: 20%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .img-logo-mao{
+        width: 20%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 480px){
+    body{
+        width: 100%;
+        height: auto;
+    }
+    .img-logo-mao{
+        display: none;
+    }
+
+    main {background-color: rgba(244, 244, 244, 1);
+        width: 90%;
+        border-radius: 20px;
+        margin: 0 auto;
+        padding: 22px 24px 23px;
+        margin-top: 30px;
+    }
+
+    select, input{
+        width: 100%;
+        height: 48px;
+        background: rgba(255, 255, 255, 1);
+        border: 1px solid rgba(187, 187, 187, 1);
+        margin-bottom: 12px;
+        border-radius: 8px;
+        appearance: none;
+        padding-left: 18px;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 700;
+        color: rgba(85, 85, 85, 1);
+    }
+
+    section{
+        border: 2px solid rgba(138, 81, 252, 1);
+        border-radius: 20px;
+        margin-top: 30px;
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    button{
+        margin-top: 10px;
+    }
+}
